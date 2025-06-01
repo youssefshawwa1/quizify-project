@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navigation Bar</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/bootstrap.min.js"></script>
+    <script defer src="js/script.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-custom">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="assets/logo.png"
+            alt="Logo"
+            width="30"
+            height="30"
+            class="d-inline-block align-text-top"
+          />
+          Quizify
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" id="about-us-btn">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a
+                type="button"
+                class="nav-link active"
+                id="adminlogging"
+                data-bs-toggle="modal"
+                data-bs-target="#loginModal"
+                >Login</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="py-5 px-3">
+      <div class="container text-center">
+        <h2 class="fw-bold">Quiz Categories</h2>
+        <p class="text-muted">
+          Choose a category and then choose quiz to start. Choose a category and
+          then choose quiz to start.
+        </p>
+
+        <div
+          class="row mt-4 gap-3 g-3 justify-content-center align-items-center"
+        ></div>
+      </div>
+    </main>
+
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="loginModalLabel">Login</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="login-form">
+              <div class="mb-3">
+                <label for="adminUsername" class="form-label"> Username</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="adminUsername"
+                  placeholder="Enter username"
+                  name="username"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="adminPassword" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="adminPassword"
+                  name="password"
+                  placeholder="Enter password"
+                />
+              </div>
+              <div class="m-auto text-center mb-4" id="success-message"></div>
+
+              <button
+                type="submit"
+                name="credentials"
+                class="btn w-100 submit-button"
+                id="submit-form"
+              >
+                Login
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="text-center py-3 text-muted">
+      &copy; 2025 <strong>Quizify</strong>
+      <br />
+      Designed and Developed by Abdulnasser Mestrah & Youssef Shawwa
+    </footer>
+  </body>
+</html>
